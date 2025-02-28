@@ -6,13 +6,14 @@
       "use": "@vercel/node"
     },
     {
-      "src": "src/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "src/build" }
+      "config": { "distDir": "build" }
     }
   ],
   "routes": [
-    { "src": "/api/v1/(.*)", "dest": "server/index.js" },
-    { "src": "/(.*)", "dest": "src/build/$1" }
+    { "src": "/api/v1/(.*)", "dest": "/server/index.js" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/build/$1" }
   ]
 }
