@@ -38,7 +38,7 @@
     "url": "https://github.com/thepranaygupta/react-tailwind-css-starter-pack/issues"
   },
   "scripts": {
-    "build": "cd src && npm install && npm run build",
+    "build": "cd src && npm run build",
     "start": "node server/index.js",
     "server": "cd server && npm run dev",
     "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"cd src && npm start\" \"npm run server\""
