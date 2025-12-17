@@ -227,11 +227,10 @@ export default function CourseInformationForm() {
         </label>
         <select
           {...register("courseCategory", { required: true })}
-          defaultValue=""
           id="courseCategory"
           className="form-style w-full"
         >
-          <option value="" disabled>
+          <option value="">
             Choose a Category
           </option>
           {!loading &&
